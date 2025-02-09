@@ -12,10 +12,9 @@ For more details on how it works do refer the [documentation](./Documentations).
 _________________________________________________________________________________
 #### This README file is written by 
 
-Aashik Sharif B  
-121003003  
-B.Tech CSE  
-SASTRA Deemed to be University  
+Aashik Sharif B    
+MS CS  
+Washington State University  
 _________________________________________________________________________________
 # To Run
 
