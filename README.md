@@ -66,9 +66,9 @@ To run this GUI application simply clone this repository in your system and run 
 This GUI Application is based on model 2 that was trained. To try model 1 or model 3 generate and save its h5 file and change its name in **output.py**.
 The following screenshots are how the GUI application  works on.   
 
-![image1](./Images/GUI1.png)  
+![image1](./Images/gui1.jpg)  
 
-![image1](./Images/GUI2.png)  
+![image1](./Images/gui2.jpg)  
 
 
 _________________________________________________________________________________
