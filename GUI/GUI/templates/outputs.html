@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="hero">
+    <h1>Model Architecture & Performance</h1>
+    <p>Detailed analysis of our cancer detection models</p>
+</div>
+
+<div class="main-card">
+    <div class="model-section">
+        <h2>Model 1 (InceptionV3)</h2>
+        <div class="model-grid">
+            <div class="model-image">
+                <h3>Model Architecture</h3>
+                <img src="static/model1/model_plot_simplified.png" alt="Model 1 Architecture" />
+            </div>
+            <div class="model-image">
+                <h3>ROC Curve</h3>
+                <img src="static/model1/roc.png" alt="Model 1 ROC" />
+            </div>
+            <div class="model-image">
+                <h3>Accuracy</h3>
+                <img src="static/model1/accuracy.png" alt="Model 1 Accuracy" />
+            </div>
+            <div class="model-image">
+                <h3>Loss</h3>
+                <img src="static/model1/loss.png" alt="Model 1 Loss" />
+            </div>
+        </div>
+    </div>
+
+    <div class="model-section">
+        <h2>Model 2 (InceptionV3 with SimpleRNN)</h2>
+        <div class="model-grid">
+            <div class="model-image">
+                <h3>Model Architecture</h3>
+                <img src="static/model2/model_plot_simplified.png" alt="Model 2 Architecture" />
+            </div>
+            <div class="model-image">
+                <h3>ROC Curve</h3>
+                <img src="static/model2/roc.png" alt="Model 2 ROC" />
+            </div>
+            <div class="model-image">
+                <h3>Accuracy</h3>
+                <img src="static/model2/accuracy.png" alt="Model 2 Accuracy" />
+            </div>
+            <div class="model-image">
+                <h3>Loss</h3>
+                <img src="static/model2/loss.png" alt="Model 2 Loss" />
+            </div>
+        </div>
+    </div>
+
+    <div class="model-section">
+        <h2>Model 3 (InceptionV3 with LSTM)</h2>
+        <div class="model-grid">
+            <div class="model-image">
+                <h3>Model Architecture</h3>
+                <img src="static/model3/model_plot_simplified.png" alt="Model 3 Architecture" />
+            </div>
+            <div class="model-image">
+                <h3>ROC Curve</h3>
+                <img src="static/model3/roc.png" alt="Model 3 ROC" />
+            </div>
+            <div class="model-image">
+                <h3>Accuracy</h3>
+                <img src="static/model3/accuracy.png" alt="Model 3 Accuracy" />
+            </div>
+            <div class="model-image">
+                <h3>Loss</h3>
+                <img src="static/model3/loss.png" alt="Model 3 Loss" />
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

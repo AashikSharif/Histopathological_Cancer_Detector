@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="hero">
+        <h1>Histopathological Cancer Detector</h1>
+        <p>Advanced analysis for precise cancer tissue detection</p>
+    </div>
+
+    <div class="main-card">
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Upload Image</h3>
+                    <p>Insert Colon Cancer tissue image</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Select Model</h3>
+                    <p>Choose a detection models</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Get Results</h3>
+                    <p>Submit for analysis</p>
+                </div>
+            </div>
+        </div>
+
+        <form method="POST" action="" enctype='multipart/form-data' class="model-form">
+            <div class="upload-section" id="uploadSection">
+                <p class="upload-title">First, upload your image</p>
+                <input type="file" id="file-upload" name="file" accept="image/*" onchange="handleFileSelect(event)">
+                <label for="file-upload" class="file-label">Choose File</label>
+                <p class="file-name" id="fileName">No file selected</p>
+            </div>
+
+            <div class="model-selection" id="modelSelection">
+                <h3>Now, select your preferred model:</h3>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="model" value="model1" checked/>
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <h4>Model 1</h4>
+                            <p>InceptionV3</p>
+                        </div>
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="model" value="model2"/>
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <h4>Model 2</h4>
+                            <p>InceptionV3 with SimpleRNN</p>
+                        </div>
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="model" value="model3"/>
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <h4>Model 3</h4>
+                            <p>InceptionV3 with LSTM</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Submit for Results</button>
+        </form>
+    </div>
+
+    <script>
+        function handleFileSelect(event) {
+            const fileName = event.target.files[0]?.name;
+            document.getElementById('fileName').textContent = fileName || 'No file selected';
+            
+            const modelSection = document.getElementById('modelSelection');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (fileName) {
+                modelSection.classList.add('active');
+                submitBtn.classList.add('active');
+                document.querySelector('.upload-section').classList.add('file-selected');
+            } else {
+                modelSection.classList.remove('active');
+                submitBtn.classList.remove('active');
+                document.querySelector('.upload-section').classList.remove('file-selected');
+            }
+        }
+    </script>
+{% endblock %}

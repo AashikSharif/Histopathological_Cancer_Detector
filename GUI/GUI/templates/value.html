@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="hero">
+        <h1>Adenocarcinoma Detection Results</h1>
+        <p>Precision and clarity in diagnosis</p>
+    </div>
+
+    <div class="main-card">
+        <div class="result-box">
+            <h2 class="result-text">The probability of having adenocarcinoma positive is:</h2>
+            <h1 class="percentage">{{ (value * 100) | round(2) }}%</h1>
+            <p class="input-info">Input Data: <strong>{{ valuetext }}</strong></p>
+            <a class="submit-btn active" href="/">Try Again</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

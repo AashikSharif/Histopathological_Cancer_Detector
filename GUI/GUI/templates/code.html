@@ -1,0 +1,27 @@
+{% extends 'layout.html'%}
+
+{%block body%}
+    <div class='inputbox'>
+    <h2>Select the model and upload the file:</h2>
+    <form method="POST" action=""  enctype='multipart/form-data'>
+        <div class="form-group">
+            <label for="model1">
+                <input type="radio" id="model1" name="model" value="model1" checked/>    
+                Model 1 (InceptionV3) 
+            </label>
+            <label for="model2">
+                <input type="radio" id="model2" name="model" value="model2" />
+                Model 2 (InceptionV3 with SimpleRNN)
+            </label>
+            <label for="model3">
+                <input type="radio" id="model3" name="model" value="model3" />
+                Model 3 (InceptionV3 with LSTM)
+            </label>
+            <br>
+            <br>
+            <input type="file" name="file"><br><br>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+        </form>
+    </div>  
+{%endblock%}
